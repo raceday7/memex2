@@ -12,7 +12,7 @@
             "dest": "/api/index.php"
         }
     ],
-    "buildCommand": "chmod +x build.sh && ./build.sh",
+    "buildCommand": "node vercel-build.js",
     "installCommand": "npm install",
     "outputDirectory": "public",
     "env": {

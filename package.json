@@ -4,8 +4,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "vercel-build": "npm run build",
-        "preinstall": "curl -sS https://getcomposer.org/installer | php && php composer.phar install --no-dev"
+        "vercel-build": "npm run build"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.14",
