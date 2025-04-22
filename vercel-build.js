@@ -1,12 +1,15 @@
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import { existsSync, mkdirSync } from 'fs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Create necessary directories
 const dirs = ['/tmp', '/tmp/ssr'];
 dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+    if (!existsSync(dir)) {
+        mkdirSync(dir, { recursive: true });
     }
 });
 
